@@ -17,6 +17,7 @@ We'd like you to build an application that displays the first 151 Pokémon. Idea
 - Please commit only once for each step in the instructions.
 - Do not bundle multiple steps in each commit.
 - Please name each commit with the name of the appropriate stage, ie "Step 1".
+- Feel free to use either Javascript or Typescript for your solution.
 
 ## Instructions
 
