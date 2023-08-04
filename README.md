@@ -25,14 +25,14 @@ We'd like you to build an application that displays the first 151 Pokémon. Idea
 Clone this repo down to your local machine and run `npm install` to install the project dependencies. To start the dev server, run `npm run dev` and it will fire up at `localhost:3000`
 
 ### Step 1
-- In `/pages/api.js` create an endpoint that pulls down the first 151 Pokémon from https://pokeapi.co/ and serves it to the user.
+- In `/pages/api/api.js` create an endpoint that pulls down the first 151 Pokémon from https://pokeapi.co/ and serves it to the user.
 
 - The API returns a little too much data for each Pokémon than we'd like. We're only interested in the 'name', 'id', 'stats' and 'types' fields. Modify your endpoint to remove all other fields on each Pokémon and serve the reduced data to your application.
 
 ### Step 2
 - Create a front-end to display all Pokémon on the webpage using the reduced data from your API function. You are free to use any layout you like.
 
-- You'll notice that the API doesn't return an image for each Pokémon. Make sure you use the relevant image for each Pokémon from the `/public/sprites` directory.
+- The API returns many different sprites for each Pokémon, but we'd like you to use the relevant image for each Pokémon from the `/public/sprites` directory instead.
 
 ### Step 3
 Bad news! The PokéAPI team are shutting down the free service! As we can no longer trust the long term availability of the PokéAPI, we'd like you to create a local solution. Install [Prisma](https://www.prisma.io/) and generate a SQLite database for it to connect to. We want you to store the 151 Pokémon in the SQLite file. It's up to you which fields to store in the database. We then want you to modify the API call to consume data from the newly created Prisma client instead of the PokéAPI.
