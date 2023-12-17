@@ -9,13 +9,11 @@ Unless I'm missing something very obvious - the second point in step one isn't p
 
 I can get the limited `limit=` list from the endpoint `https://pokeapi.co/api/v2/pokemon?limit=151` but that only returns a name and url - I can assume an ID purely from the index (but this is very bad practice) - or make the (correct) assumption that the ID is the last part of the "url" (ending /151/)  returned. _Assumptions are also bad practice but I'm sure this is documented somewhere on the API docs._
 
-Further calls would be necessary based on the extracted id (which I've implemented - yet no caching/cancelling/aborting/batching as yet).
-
-Further calls for stats and types would need:
+Further calls would be necessary based on the extracted id (which I've implemented - yet no caching/cancelling/aborting/batching as yet):
 
 `https://pokeapi.co/api/v2/pokemon/{id}`
 
-Responses from RESTful calls cannot be amended - only the data returned can be filtered/reduced. This is a perfect example of over-fetching. I mention this only as the instructions state "Modify your endpoint to remove all other fields on each Pokémon and serve the reduced data to your application" - you can reduce the response but the response (just as the song) remains the same :/
+Responses from RESTful calls cannot be amended - only the data returned can be filtered/reduced. This is a perfect example of over-fetching. I mention this only as the instructions state **"Modify your endpoint to remove all other fields on each Pokémon and serve the reduced data to your application"** - you can reduce the response but the response (just as the song [https://youtube.com/watch?v=MTRgvPrUuU8]) remains the same :/
 
 I do plan to implement a GraphQL example within the further steps (#3 - Prisma>SQLite) so as to overcome these issues - on the TODO list.
 
@@ -24,9 +22,9 @@ Styling here (Step 1) is basic to say the least (no responsive elements) - some 
 
 
 
-### nota bene
+**nota bene**
 
-The following npm audit errors (low) appear from the initial clone - just so as you're aware...
+The following npm audit errors (_low_) appear from the initial clone - just so as you're aware...
 
 next  0.9.9 - 13.5.4-canary.11
 Severity: moderate
