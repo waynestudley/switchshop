@@ -1,0 +1,21 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style-type: none; /* I don't want to display bulletted or numbered list items */
+  padding: 0;
+  margin: 0; 
+}
+
+li {
+  margin-bottom: 10px; /* Bit of spacing between list items */
+  display: flex; /* For alignment */
+  align-items: flex-start; /* To the top! */
+}
+
+.index {
+  min-width: 30px; /* Adjust the width as needed */
+  text-align: right; /* Right-align the index numbers */
+  padding-right: 10px; /* Add spacing between index numbers and names */
+}

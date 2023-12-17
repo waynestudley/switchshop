@@ -1,5 +1,17 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import axios from "axios";
 
-export default function handler(req, res) {
-    res.status(200).json({ name: 'John Doe' })
-}
+const getApiUrl = (apiPath) => {
+  const apiUrl = `${process.env.NEXT_PUBLIC_API_BASEURL}${apiPath || ""}`;
+  return apiUrl;
+};
+
+export const apiBuilder = (apiPath) => {
+  const apiUrl = getApiUrl(apiPath);
+
+  const instance = axios.create({
+    baseURL: apiUrl,
+    timeout: 300000
+  });
+
+  return instance.get();
+};
