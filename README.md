@@ -1,30 +1,30 @@
 # Switchshop Pokémon full-stack challenge
 
 
-## My notes
-Step 1
+### My (WS) notes
+
+**Step 1**
+
 Unless I'm missing something very obvious - the second point in step one isn't particularly clear nor viably workable.
 
-I can get the limited (limit=) list from the endpoint https://pokeapi.co/api/v2/pokemon?limit=151 but that only returns a name and url - I can assume an ID purely from the index (but this is very bad practice) - or make the (correct) assumption that the ID is the last part of the "url" (e.g. /151/)  returned.
+I can get the limited `limit=` list from the endpoint `https://pokeapi.co/api/v2/pokemon?limit=151` but that only returns a name and url - I can assume an ID purely from the index (but this is very bad practice) - or make the (correct) assumption that the ID is the last part of the "url" (ending /151/)  returned. _Assumptions are also bad practice but I'm sure this is documented somewhere on the API docs._
 
-Further calls would be necessary based on the extracted id (which I've implemented). Further calls for stats and types would need:
+Further calls would be necessary based on the extracted id (which I've implemented - yet no caching/cancelling/aborting/batching as yet).
 
-https://pokeapi.co/api/v2/pokemon/1
+Further calls for stats and types would need:
 
-I've implemented a further call based on the ID of a name/extracted ID.
+`https://pokeapi.co/api/v2/pokemon/{id}`
 
-Responses from RESTful calls cannot be amended - only the data returned can be filtered/reduced. A perfect example of over-fetching.
+Responses from RESTful calls cannot be amended - only the data returned can be filtered/reduced. This is a perfect example of over-fetching. I mention this only as the instructions state "Modify your endpoint to remove all other fields on each Pokémon and serve the reduced data to your application" - you can reduce the response but the response (just as the song) remains the same :/
 
-I've been through the pokeapi documentation and cannot find a means to extract only the id, name, stats and type from any given id so I've used the above API call and then destructuted the data - displaying it when the name is clicked.
+I do plan to implement a GraphQL example within the further steps (#3 - Prisma>SQLite) so as to overcome these issues - on the TODO list.
 
-I do plan to implement GraphQL example within the further steps (#3 - Prisma>SQLite) so as to overcome this issue over-fetching.
-
-Styling here (Step 1) is basic to say the least (no responsive elements) - some inline styling and basic CSS - more to come.
+Styling here (Step 1) is basic to say the least (no responsive elements) - some inline styling and basic CSS - another TODO.
 
 
 
 
-
+### nota bene
 
 The following npm audit errors (low) appear from the initial clone - just so as you're aware...
 
