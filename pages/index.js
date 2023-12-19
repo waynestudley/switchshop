@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import 'typeface-roboto'
 import { apiBuilder } from "./api/api"
+import Image from 'next/image'
 
 export default function Home() {
   const [data, setData] = useState([])
@@ -51,7 +52,7 @@ export default function Home() {
     }
   }
 
-  // All names should start with a Capital letter surely - even that of a PThing? 
+  // All names should start with a Capital letter surely - even that of a Pokey Thing? 
   const capName = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -70,33 +71,38 @@ export default function Home() {
     return <div>Error: {error.message}</div>
   }
 
-  
+ return (
+  <div className="image-container">
+    {data.map((item, index) => (
+      <div key={index} className="pokemon-image-container">
+        <Image
+          src={`/sprites/${extractIdFromUrl(item.url)}.svg`}
+          alt={item.name}
+          className="pokemon-image zoom-image"
+          width="100"
+          height="100"
+        />
+        {/* Move the label outside of the container */}
+        <div className="image-label-container">
+          <div className="image-label">{item.name}</div>
+        </div>
+      </div>
+    ))}
+  </div>
 
-  return (
-    <div>
-      <h3>List of first {pokeLimit} Pokemons</h3>
-      (Click a name to reveal more details)
-      <br/>
-      <br/>
-      <ul>
-        {data.map((item, index) => ( // map through the results and display as unstyled list
-          <li key={index} style={{ cursor: 'pointer' }} onClick={() => handleItemClick(extractIdFromUrl(item.url))}> 
-          {/* an onCLick call to get stats/types */}
-          <span className="index">{index + 1}.</span> {capName(item.name)}
-          
-          {selectedItem === extractIdFromUrl(item.url) && (
-            <div>
-              <br/>
-              <hr/>
-              <div><strong>Stats:</strong> {JSON.stringify(stat.stats)}</div> {/* stringified as I've no idea what to do with this info as yet*/}
-                <hr/>
-                <div><strong>Types:</strong> {JSON.stringify(stat.types)}</div>
-                <hr/>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
+  // <div className="image-container">
+  //   {data.map((item, index) => (
+  //     <div key={index} className="pokemon-image-container">
+  //       <Image
+  //         src={`/sprites/${extractIdFromUrl(item.url)}.svg`}
+  //         alt={item.name}
+  //         className="pokemon-image zoom-image"
+  //         width="100"
+  //         height="100"
+  //       />
+  //       <div className="image-label">{capName(item.name)}</div>
+  //     </div>
+  //   ))}
+  // </div>  
+  )     
 }

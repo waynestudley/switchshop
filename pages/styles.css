@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
+  padding: 50px;
 }
 
 ul {
@@ -19,3 +20,62 @@ li {
   text-align: right; /* Right-align the index numbers */
   padding-right: 10px; /* Add spacing between index numbers and names */
 }
+
+.image-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.pokemon-image {
+  width: 100px; 
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #999;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Simple zoom on Mouse over */
+.zoom-image {
+  transition: transform 0.3s; 
+}
+
+.zoom-image:hover {
+  transform: scale(1.1);
+}
+
+/* Add an image label */
+.image-label {
+  opacity: 0; 
+  transform: scale(1.25); 
+  transition: opacity 0.4s, transform 0.4s; 
+  position: relative; 
+  width: 100px; 
+  height: 30px;
+  display: flex;
+  left: 12px;
+  top: 2px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: #fff; 
+  font-size: 18px; 
+  font-weight: bold;
+
+}
+
+.pokemon-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* zoom down the image label */
+.pokemon-image-container:hover .image-label {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
