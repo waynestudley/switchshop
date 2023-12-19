@@ -15,3 +15,18 @@ export const apiBuilder = (apiPath) => {
 
   return instance.get();
 };
+
+
+// Example code to create a new user using Prisma Client
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
+
+export async function getAllPokemon() {
+  try {
+    const pokemon = await prisma.pokemon.findMany();
+    return pokemon;
+  } catch (error) {
+    throw new Error("Error fetching Pokemon data: " + error.message);
+  }
+}
