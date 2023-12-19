@@ -19,7 +19,7 @@ I do plan to implement a GraphQL example within the further steps (#3 - Prisma>S
 Styling here (Step 1) is basic to say the least (no responsive elements) - some inline styling and basic CSS - another TODO.
 
 
-**Step 1**
+**Step 2**
 Simple enough - I've not had to add any responsive css page size breaks given the flex spacing/wraps of the images. Added a little animation to spice it up a wee bit.
 
 
