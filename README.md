@@ -4,6 +4,7 @@
 ### My (WS) notes
 
 **Step 1**
+
 Unless I'm missing something very obvious - the second point in step one isn't particularly clear nor viably workable.
 
 I can get the limited `limit=` list from the endpoint `https://pokeapi.co/api/v2/pokemon?limit=151` but that only returns a name and url - I can assume an ID purely from the index (but this is very bad practice) - or make the (correct) assumption that the ID is the last part of the "url" (ending /151/)  returned. _Assumptions are also bad practice but I'm sure this is documented somewhere on the API docs._
@@ -20,6 +21,7 @@ Styling here (Step 1) is basic to say the least (no responsive elements) - some 
 
 
 **Step 2**
+
 Simple enough - I've not had to add any responsive css page size breaks given the flex spacing/wraps of the images. Added a little animation to spice it up a wee bit.
 
 
