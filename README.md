@@ -34,7 +34,9 @@ I'll come back to this but I'm wary of time so I'll move on to Step 4 (I'll use 
 
 Added a little sorting button/list and a new component to display the selected Pokemon.
 
-Given that Step 3 has failed with the data seeding I cannot filter but stats/type as yet but I'll post this along so that you have something deleivered but then get back to Step 3 and, once working - apply it to this step...
+I'm aware that this should be the search function (this is more step 5) - I'm just wary of time - I will update accordingly I'm just wary of time and wanted to get something over...
+
+Given that Step 3 has failed with the data seeding I cannot filter but stats/type as yet but I'll post this along so that you have something delivered but then get back to Step 3 and, once working - apply it to this step...
 
 
 
