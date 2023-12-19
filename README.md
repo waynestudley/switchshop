@@ -22,6 +22,21 @@ Styling here (Step 1) is basic to say the least (no responsive elements) - some 
 **Step 1**
 Simple enough - I've not had to add any responsive css page size breaks given the flex spacing/wraps of the images. Added a little animation to spice it up a wee bit.
 
+**Step 2**
+Simple enough - I've not had to add any responsive css page size breaks given the flex spacing/wraps of the images. Added a little animation to spice it up a wee bit.
+
+**Step 3**
+I'd tried to populate/seed the newly created SQLite db but failed - a combination of local permissions not playing ball - sudo'ing commands do not overcome the issue.
+
+I'll come back to this but I'm wary of time so I'll move on to Step 4 (I'll use the simpler Step 3 branch to add some sorting) and come back to this - as the Pirate with his ship's wheel stuck to his groin said: "It's driving me nuts".
+
+**Step 4**
+Added a little sorting button/list and a new component to display the selected Pokemon.
+
+Given that Step 3 has failed with the data seeding I cannot filter but stats/type as yet but I'll post this along so that you have something deleivered but then get back to Step 3 and, once working - apply it to this step...
+
+
+
 
 **nota bene**
 

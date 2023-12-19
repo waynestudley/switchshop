@@ -35,7 +35,7 @@ li {
   padding: 10px;
   border: 1px solid #999;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  cursor: crosshair; 
 }
 
 /* Simple zoom on Mouse over */
