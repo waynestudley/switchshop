@@ -89,20 +89,5 @@ export default function Home() {
       </div>
     ))}
   </div>
-
-  // <div className="image-container">
-  //   {data.map((item, index) => (
-  //     <div key={index} className="pokemon-image-container">
-  //       <Image
-  //         src={`/sprites/${extractIdFromUrl(item.url)}.svg`}
-  //         alt={item.name}
-  //         className="pokemon-image zoom-image"
-  //         width="100"
-  //         height="100"
-  //       />
-  //       <div className="image-label">{capName(item.name)}</div>
-  //     </div>
-  //   ))}
-  // </div>  
   )     
 }
